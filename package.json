@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "rush": "node index.js 320x480 ./resizer/input_dir ./resizer/output_dir",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rush": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "copy .env.local .env"
   },
   "keywords": [],
   "author": "",
