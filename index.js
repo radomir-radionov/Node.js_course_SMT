@@ -1,12 +1,13 @@
 const process = require("process");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config();
 const sharp = require("sharp");
 const isImage = require("is-image");
 
-const [width, height] = process.argv[2].split("x");
-const inputFile = process.argv[3];
-const outputFile = process.argv[4];
+const [width, height] = process.env.SIZE.split("x");
+const inputFile = process.env.INPUT_FILE;
+const outputFile = process.env.OUTPUT_FILE;
 
 fs.readdir(outputFile, (err, files) => {
   if (files.length) {
