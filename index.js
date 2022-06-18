@@ -1,10 +1,17 @@
-require('dotenv').config()
-const app = require('./app/main')
+const fs = require("fs");
+const zlib = require("zlib");
+require("dotenv").config();
 
-async function main () {
-    console.time('Application duration')
-    await app()
-    console.timeEnd('Application duration')
-}
+const inputFile = process.env.INPUT_FILE;
+const outputFile = process.env.OUTPUT_FILE;
 
-main()
+const compressFile = (path) => {
+  const handleStream = fs.createReadStream(path);
+  handleStream
+    .pipe(zlib.createGzip())
+    .pipe(fs.createWriteStream(outputFile))
+    .on("finish", () => {
+      console.log(`Compression process done: ${path}`);
+    });
+};
+compressFile(inputFile);
