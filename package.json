@@ -12,7 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "free-translate": "^0.6.1",
     "is-image": "^3.0.0",
-    "sharp": "^0.30.6"
+    "sharp": "^0.30.6",
+    "translate": "^1.4.1",
+    "translate-google": "^1.5.0",
+    "translatte": "^3.0.1"
   }
 }
