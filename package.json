@@ -1,22 +1,31 @@
 {
-  "name": "2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@radomir666/is-test",
+  "version": "1.0.5",
+  "description": "Testing string package",
+  "main": "index.mjs",
   "scripts": {
-    "rush": "node index.js 320x480 ./resizer/input_dir ./resizer/output_dir",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "SET Node_ENV=development& node index.mjs",
+    "build": "SET Node_ENV=production& node index.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radomir-radionov/test-npm-package.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Ra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radomir-radionov/test-npm-package/issues"
+  },
+  "homepage": "https://github.com/radomir-radionov/test-npm-package#readme",
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "free-translate": "^0.6.1",
-    "is-image": "^3.0.0",
-    "sharp": "^0.30.6",
-    "translate": "^1.4.1",
-    "translate-google": "^1.5.0",
-    "translatte": "^3.0.1"
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
   }
 }
